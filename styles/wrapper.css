@@ -1,0 +1,13 @@
+.wrapper-base{
+    /* width: 100%;  */
+    box-sizing: border-box; 
+    overflow: auto;
+}
+
+.w-collapse{
+    height: fit-content !important; 
+}
+
+.w-stretch{
+    height: 100% !important; 
+}
