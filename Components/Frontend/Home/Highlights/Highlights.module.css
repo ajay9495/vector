@@ -1,0 +1,63 @@
+.mainWrapper{
+    background-color: #fff;
+    padding: 5rem 1rem 1rem 1rem;
+}
+
+.scrollWrapper{
+    /* background-color: #c52626; */
+    transform: rotate(270deg) translateX(8rem);
+    /* transform: ; */
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.line{
+    background-color: #fff;
+    width: 5rem;
+    height: 3px;
+}
+
+.image{
+    width: 4rem;
+    height: 4rem;
+}
+
+.text{
+    font-size: 1rem;
+}
+
+.item{
+    transform: translateY(5rem);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.itemActive{
+    transform: translateY(0rem);
+    opacity: 1;
+}
+
+
+
+@media (max-width:576px) {
+    
+    .image{
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    .text{
+        font-size: 1.5rem;
+    }
+
+    .contentWrapper{
+        gap: 6rem;
+    }
+    
+    .item{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+}
+

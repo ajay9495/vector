@@ -1,5 +1,6 @@
 .mainWrapper{
-    padding: 3rem 0rem 20rem 0rem;
+    background-color: #fff;
+    padding: 10rem 0rem 0rem 0rem;
 }
  
 .contentWrapper{
@@ -59,7 +60,20 @@
 
 
 
+@media (max-width: 576px) {
+    
+    .contentWrapper{
 
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .porfolioMenu{
+        font-size: 1.4rem;
+    }
+
+}
 
 
 

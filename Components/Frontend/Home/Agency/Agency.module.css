@@ -1,0 +1,90 @@
+
+.mainWrapper{
+    background-color: #fff;
+    
+}
+
+.overlay{
+    background: url('../../../../Assets//Images/agency.webp');
+    background-size: cover;
+    background-position: right;
+
+}
+
+.innerWrapper{
+    margin-left: -25rem;
+    padding: 7rem 0rem 7rem 0rem;
+}
+
+.title{
+    color: #fdd200;
+    font-weight: 800;
+    font-size: 11rem;
+    opacity: 0;
+    transform: translateX(-5rem);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+}
+
+.titleActive{
+    opacity: 1;
+    transform: translateX(0rem);
+}
+
+.subtitle{
+    font-weight: 600;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.subtitleActive{
+    opacity: 1;
+}
+
+.buttonWrapper{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.buttonWrapperActive{
+    opacity: 1;
+}
+
+@media (max-width: 576px) {
+    
+    .mainWrapper{
+        background-color: #fff;
+        
+    }
+
+    .innerWrapper{
+        margin-left: 0rem;
+        gap: 5rem;
+        padding: 7rem 0rem 7rem 0rem;
+    }
+
+   
+
+    .title{
+        font-weight: 800;
+        font-size: 7rem;
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+    
+    .subtitle{
+        font-weight: 400;
+        font-size: 2.5rem;
+        padding: 0rem 3rem 0rem 3rem;
+        opacity: 1;
+    }
+
+    .buttonWrapper{
+        opacity: 1;
+    }
+    
+
+}
+
+

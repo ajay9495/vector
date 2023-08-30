@@ -1,0 +1,54 @@
+
+.logo{
+    width: 10rem;
+    height: auto;
+}
+
+
+.menuItem{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.menuItem:hover{
+    color: #eb0e0e 
+}
+
+
+/* .menuWrapper{
+    margin-left: 10rem;
+} */
+
+.socialMediaWrapper{
+    display: flex;
+}
+
+@media (max-width: 576px) {
+    
+    .menuWrapper{
+        margin-left: 10rem;
+    }
+
+    .socialMediaWrapper{
+        display: none;
+    }
+
+    .menuWrapper{
+        display: none;
+    }
+    
+    .logo{
+        width: 13rem;
+        height: auto;
+    }
+    
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+
+
+.mainWrapper{
+    background-color: hsl(0, 0%, 100%);
+    padding: 10rem 5rem 0rem 5rem;
+}
+
+.hello{
+    color: #fdd200;
+    font-size: 7rem;
+    font-weight: 600;
+}
+
+.title{
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+.description{
+    font-size: 1.3rem;
+}
+
+
+@media (max-width:576px) {
+    
+    
+
+    .mainWrapper{
+        background-color: #fff;
+        padding: 10rem 0rem 0rem 0rem;
+    }
+
+    .title{
+        font-size: 2.7rem;
+        font-weight: 600;
+    }
+
+    .hello{
+        color: #fdd200;
+        font-size: 7rem;
+        font-weight: 800;
+    }
+    
+    .description{
+        font-size: 1.5rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+

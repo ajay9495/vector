@@ -1,0 +1,64 @@
+
+.mainWrapper{
+    background-color: #000000e4;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    top: 0px;
+}
+
+.innerWrapper{
+    /* background-color: #dbc9c9; */
+    /* position: fixed; */
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    top: 0px;
+}
+
+.contentWrapper{
+    background-color: #fff;
+    padding: 3rem 3rem 3rem 3rem;
+}
+
+.first{
+    font-size: 2rem;
+}
+
+
+.second{
+    font-size: 2.3rem;
+}
+
+
+.third{
+    font-weight: 800;
+    font-size: 6rem;
+    color: #fdd200;
+}
+
+
+.close{
+    color: #000000;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    
+    .close{
+        color: #000000;
+        font-size: 2rem;
+    }
+    
+    .contentWrapper{
+        background-color: #fff;
+        padding: 4rem 2rem 4rem 2rem;
+    }
+}
+
+
+
+
+
+

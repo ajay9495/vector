@@ -1,0 +1,112 @@
+
+
+.mainWrapper{
+    width:fit-content;
+    height: 100%;
+    background-color: #0c1427;
+    /* background-color: #afafaf; */
+}
+
+.headerWrapper{
+    border-bottom: 1px solid #ffffff47;
+}
+
+.headerWrapper .icon{
+    font-size: 1rem;
+}
+
+.headerText{
+    display: block;
+}
+
+
+.headerTextHidden{
+    display: none;
+}
+
+
+.iconWrapper{
+ 
+    background-color: #0c1427;   
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 1.5rem;
+    /* border: 1px solid #fff; */
+    box-sizing: border-box;
+    display: flex;
+    margin-right: -1.5rem;
+    margin-left: auto;
+    z-index: 10;
+}
+
+.iconWrapperRotate{
+    background-color: #0c1427;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 1.5rem;
+    /* border: 1px solid #fff; */
+    box-sizing: border-box;
+    display: flex;
+    transform: rotate(180deg);
+    margin-right: -1.5rem;
+    margin-left: auto;
+    z-index: 10;
+}
+
+.icon{
+    font-size: 1.3rem;
+    /* color: #fff; */
+}
+
+.menuSub{
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.menuSubActive{
+    color: #6571ff !important;
+}
+
+.menuSub:hover{
+    color: #6571ff !important;
+}
+
+.menuSub:active{
+    color: #3646f7 !important;
+}
+
+.menuText{
+    /* color: #fff; */
+    font-size: 1.1rem;
+    padding-right: 5rem;
+    display: block;
+}
+
+.menuTextHidden{
+    /* color: #fff; */
+    font-size: 1.1rem;
+    padding-right: 5rem;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
