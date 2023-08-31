@@ -2,7 +2,7 @@
 import Row from '../../../BaseComponents/Row/Row';
 import Col from '../../../BaseComponents/Col/Col';
 import Box from '../../../BaseComponents/Box/Box';
-
+ 
 import styles from './Header.module.css';
 import Image from 'next/image';
 import vectorLogo from '../../../../Assets/Images/vectorLogo.webp'

@@ -16,8 +16,45 @@ export default function HomeLogic(){
     }
 
     const [IsModalVisible, setIsModalVisible] = useState(false);
-
+    const [HeaderStateActive, setHeaderStateActive] = useState(false);
+    const [ScrollDirection, setScrollDirection] = useState("down");
+    const [prevScrollY, setPrevScrollY] = useState(0);
     const [ServiceExpandState, setServiceExpandState] = useState(INITIAL_SERVICE_EXPAND_STATE);
+
+
+    var currentScrollY;
+
+    function scrollFunction(event){
+
+
+      currentScrollY = event.currentTarget.scrollTop;
+
+      if(currentScrollY == 0){
+
+        setScrollDirection('down');
+
+      }
+      else if(currentScrollY > prevScrollY) {
+
+        if(ScrollDirection != 'down'){
+
+            setScrollDirection('down');
+        }
+
+      } 
+      else if(currentScrollY < prevScrollY) {
+
+        if(ScrollDirection != 'up'){
+
+            setScrollDirection('up');
+        }
+
+      }
+
+      setPrevScrollY(currentScrollY);
+
+    };
+
 
     useEffect(()=>{
 
@@ -31,10 +68,11 @@ export default function HomeLogic(){
 
     const Events ={
         setIsModalVisible,
-        setServiceExpandState
+        setServiceExpandState,
+        scrollFunction
     }
     
-    return {ServiceExpandState, IsModalVisible, Events}
+    return {ServiceExpandState, IsModalVisible, ScrollDirection, Events}
 
 
 }

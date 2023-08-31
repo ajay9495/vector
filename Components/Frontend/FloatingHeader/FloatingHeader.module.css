@@ -1,20 +1,76 @@
 
 .mainWrapper{
     width: 100%;
-    background-color: #0000006b;
+    background-color: #000000;
     position: fixed;
     z-index: 10;
     top: 0px;
+    transform: translateY(-15rem);
+    transition: transform 0.5s ease-in-out;
 }
 
 .topState{
-
-    transform: translateY(0rem);
+    transform: translateY(-15rem);
 }
 
 .bottomState{
-    transform: translateY(5rem);
+    transform: translateY(0rem);
 }
+
+
+
+.logo{
+    width: 10rem;
+    height: auto;
+}
+
+
+.menuItem{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.menuItem:hover{
+    color: #baa1a1 
+}
+
+
+/* .menuWrapper{
+    margin-left: 10rem;
+} */
+
+.socialMediaWrapper{
+    display: flex;
+}
+
+@media (max-width: 576px) {
+    
+    .menuWrapper{
+        margin-left: 10rem;
+    }
+
+    .socialMediaWrapper{
+        display: none;
+    }
+
+    .menuWrapper{
+        display: none;
+    }
+    
+    .logo{
+        width: 13rem;
+        height: auto;
+    }
+    
+
+}
+
+
+
+
+
 
 
 

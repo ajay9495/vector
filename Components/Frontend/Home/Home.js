@@ -24,20 +24,20 @@ import FloatingHeader from '../FloatingHeader/FloatingHeader';
 const roboto = Poppins({ 
   subsets: ['latin'],
   weight: '400'
- })
+});
 
 
 export default function Home() {
 
-  const {ServiceExpandState, IsModalVisible, Events} = HomeLogic();
+  const {ServiceExpandState, IsModalVisible, ScrollDirection, Events} = HomeLogic();
 
   return ( 
 
-    <>
+    <div>
       {(ServiceExpandState.isVisible)&& <ServiceExpand data={ServiceExpandState.data} Events={Events} />}
       {(IsModalVisible)&& <Modal Events={Events} />}
-      {/* <FloatingHeader /> */}
-      <div className={`${styles.mainWrapper}   ${roboto.className}`}>
+      <FloatingHeader ScrollDirection={ScrollDirection} />
+      <div className={`${styles.mainWrapper}   ${roboto.className}`}  onScroll={Events.scrollFunction} >
         
         <Hero />
         <HeroMobile />
@@ -49,6 +49,6 @@ export default function Home() {
         <Agency />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
