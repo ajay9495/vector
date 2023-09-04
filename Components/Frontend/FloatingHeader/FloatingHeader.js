@@ -11,10 +11,7 @@ import {FaFacebookF} from 'react-icons/fa'
 import {FaTwitter} from 'react-icons/fa'
 import {FaInstagram} from 'react-icons/fa'
 
-
-
 export default function FloatingHeader({ScrollDirection}) {
-
  
   return (
     <Row  globalStyles={'bo w-12 rx-center'} localStyles={`${styles.mainWrapper} ${(ScrollDirection == 'up')? styles.bottomState : styles.topState }`} >
@@ -36,13 +33,13 @@ export default function FloatingHeader({ScrollDirection}) {
           </Row>
           <Row  globalStyles={'bo  ry-center g-4 mr-3'} localStyles={styles.socialMediaWrapper} >
             <Col  globalStyles={'bo show-pointer'}  >
-              <FaFacebookF color={'#fff'} fontSize={'0.9rem'} />
+              <FaFacebookF color={'#fff'}  className={styles.icons}  />
             </Col>
             <Col  globalStyles={'bo show-pointer'}  >
-              <FaTwitter color={'#fff'} fontSize={'1rem'} />
+              <FaTwitter color={'#fff'}  className={styles.icons} />
             </Col>
             <Col  globalStyles={'bo show-pointer'}  >
-              <FaInstagram color={'#fff'} fontSize={'1rem'} />
+              <FaInstagram color={'#fff'}  className={styles.icons} />
             </Col>
           </Row>
         </Row>

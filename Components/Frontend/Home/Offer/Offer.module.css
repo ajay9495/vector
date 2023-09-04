@@ -66,6 +66,12 @@
 
 @media (max-width: 576px) {
 
+    .mainWrapper{
+
+        padding: 15rem 0rem 15rem 0rem;
+        background-color: #fff;
+    }
+
     .leftText{
         text-align: center;
         font-size: 1.6rem;

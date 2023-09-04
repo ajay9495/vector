@@ -40,6 +40,19 @@
 
 
 @media (max-width:576px) {
+
+    .mainWrapper{
+        /* background-color: #ba4646; */
+        padding: 10rem 1rem 1rem 1rem;
+    }
+
+    .scrollWrapper{
+        /* background-color: #c52626; */
+        transform: rotate(270deg) translateX(13rem);
+        /* transform: ; */
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
     
     .image{
         width: 6rem;

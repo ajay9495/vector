@@ -12,7 +12,7 @@ export default function Hero() {
 
   const {Events} = HeroLogic();
 
-  return ( 
+  return (  
     <div className={styles.hero}>
         <div className={styles.foreground}>
             <Header />
@@ -21,7 +21,7 @@ export default function Hero() {
                   <Col  globalStyles={'bo w-4'} localStyles={styles.title} >
                     We are creative agency
                   </Col>
-                  <Row  globalStyles={'bo ry-center'} localStyles={styles.btnWrapper} onClick={Events.goTo}>
+                  <Row  globalStyles={'bo ry-center mt-3'} localStyles={styles.btnWrapper} onClick={Events.goTo}>
                     <Box  globalStyles={'bo'} localStyles={styles.btnText} >
                       GET STARTED NOW
                     </Box>

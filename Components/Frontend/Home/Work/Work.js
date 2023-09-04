@@ -22,9 +22,9 @@ export default function Work({Events}) {
     <Col globalStyles={'bo  cx-center  '} localStyles={styles.mainWrapper} >
       <Row  id={'works'} globalStyles={'bo py-5 w-9 w-10-s ry-center rx-space-between'}  >
         <Box     globalStyles={'bo  txt-l txt-bold-m'}  >
-          My Works
+          Amazing Works
         </Box>
-        <Row  globalStyles={'bo mt-5-s g-4'}  >
+        <Row  globalStyles={'bo mt-5-s g-4 g-3-s'}  >
           <Box  globalStyles={'bo '} localStyles={styles.porfolioMenu} onClick={()=>{ workEvents.getAllItems() }} >
             All
           </Box>
