@@ -120,32 +120,54 @@ export default function AddProductsLogic(){
 
     function submitForm(){
 
-        if(isInputsValid()){
-
-
-            setRequestStatus("sending");
-
-            const formData =  new FormData();
-            formData.append("product_name",ProductData.product_name.value);
-            formData.append("category", ProductData.category.value);
-            formData.append("image", ProductData.image.value);
-
-
-            api.sendFormData({endpoint:"postProductData",data: formData})
-            .then((response)=>{
-
-                processApiResponse(response);
-            })
-            .catch((error)=>{
-
-                api.processApiError(error);
-            });
-
+        var options = {
+            endpoint: "test",
+            queryParams: {}
         }
-        else{
-            openToastState("Could not submit the form. All fields are required");
-        }
+
+        api.sendGetRequest(options)
+        .then((response)=>{
+
+            console.log("hello response");
+            console.log(response);
+        })
+        .catch((error)=>{
+            
+            console.log("error");
+            console.log(error);
+        });
+
     }
+
+
+    // function submitForm(){
+
+    //     if(isInputsValid()){
+
+
+    //         setRequestStatus("sending");
+
+    //         const formData =  new FormData();
+    //         formData.append("product_name",ProductData.product_name.value);
+    //         formData.append("category", ProductData.category.value);
+    //         formData.append("image", ProductData.image.value);
+
+
+    //         api.sendFormData({endpoint:"postProductData",data: formData})
+    //         .then((response)=>{
+
+    //             processApiResponse(response);
+    //         })
+    //         .catch((error)=>{
+
+    //             api.processApiError(error);
+    //         });
+
+    //     }
+    //     else{
+    //         openToastState("Could not submit the form. All fields are required");
+    //     }
+    // }
 
     function processApiResponse(response){
 
