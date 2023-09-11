@@ -141,8 +141,6 @@ export default function EditProductsLogic(){
 
         if(isInputsValid()){
 
-            console.log("hello submitForm");
-
 
             setRequestStatus("sending");
 
@@ -171,44 +169,41 @@ export default function EditProductsLogic(){
 
     function processApiResponse(response){
 
-        console.log("processApiResponse");
-        console.log(response);
+        if(response.status == "success"){
 
-        // if(response.status == "success"){
-
-        //     setRequestStatus("sent");
-        //     openToastState("Successfully saved data in the database.");
+            setRequestStatus("sent");
+            openToastState("Successfully saved data in the database.");
             
-        //     setTimeout(()=>{
+            setTimeout(()=>{
 
-        //         closeToast("");
-        //     },3000);
+                closeToast("");
+            },3000);
 
-        // }
-        // else if(response.status == "failed"){
-
-
-        //     setRequestStatus("sent");
-        //     openToastState(response.message);
+        }
+        else if(response.status == "failed"){
 
 
-        //     setTimeout(()=>{
+            setRequestStatus("sent");
+            openToastState(response.message);
 
-        //         closeToast("");
-        //     },3000);
 
-        // }
-        // else{
+            setTimeout(()=>{
+
+                closeToast("");
+            },3000);
+
+        }
+        else{
             
-        //     setRequestStatus("sent");
-        //     openToastState("Could not post data in the database. There was an error in the server");
+            setRequestStatus("sent");
+            openToastState("Could not post data in the database. There was an error in the server");
 
 
-        //     setTimeout(()=>{
+            setTimeout(()=>{
 
-        //         closeToast("");
-        //     },3000);
-        // }
+                closeToast("");
+            },3000);
+        }
         
     }
 
@@ -224,10 +219,14 @@ export default function EditProductsLogic(){
 
         api.sendPostRequest(options)
         .then((response)=>{
+
+
             processProductData(response);
         })
         .catch((error)=>{
-            processApiError(error);
+
+
+            api.processApiError(error);
         });
 
     }
