@@ -12,6 +12,7 @@ export default function ViewProductsLogic(data){
     var PAGES_COUNT = 0;
     var ROW_COUNT = 5;
 
+
     if(router.query.page){
 
         CURRENT_PAGE = router.query.page 
@@ -42,12 +43,10 @@ export default function ViewProductsLogic(data){
 
     useEffect(()=>{
 
-        console.log("ViewProductsLogic");
-        console.log(data);
 
         if(data.status != "success"){
 
-           alert("Could not get data from the server. Due to an error") 
+           alert("Could not get any product data from the server.") 
         }
 
         setPagesCount(PAGES_COUNT)
@@ -89,8 +88,6 @@ export default function ViewProductsLogic(data){
 
     function deleteProduct(id){
 
-        console.log("deleteProduct");
-        console.log(id);
 
         var options = {
             endpoint:'deleteProduct',
@@ -99,13 +96,16 @@ export default function ViewProductsLogic(data){
             }
         } 
 
-        // api.sendPostRequest(options)
-        // .then((response)=>{
-        //     processDeleteRequest(response);
-        // })
-        // .catch((error)=>{
-        //     processApiError(error);
-        // })
+        api.sendPostRequest(options)
+        .then((response)=>{
+            processDeleteRequest(response);
+        })
+        .catch((error)=>{
+            api.processApiError(error);
+        });
+
+
+
     }
 
     function processDeleteRequest(response){
@@ -128,7 +128,7 @@ export default function ViewProductsLogic(data){
             }
         }
         else{
-            api.processApiError("Could not delete the item due to an error in the server")
+            api.processApiError("Could not complete the request,due to an error in the server")
         }
 
     }

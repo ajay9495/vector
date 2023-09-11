@@ -1,8 +1,10 @@
 
 
 import ViewProducts from "../../Components/AdminComponents/ViewProducts/ViewProducts";
+import SharedConfig from '../../Components/SharedModules/SharedConfig';
 
 export const getServerSideProps = async (context) => {
+
 
     try{
 
@@ -28,10 +30,14 @@ export const getServerSideProps = async (context) => {
 
 function sendGetRequest({ endpoint, queryParams = {} } = {}) {
 
+    const {config} = SharedConfig();
+
     let request;
     let REQUEST_OPTIONS;
     let END_POINT;
-    let BASE_URL = 'http://143.110.176.102:5000/';
+    // let BASE_URL = 'http://143.110.176.102:5000/';
+    let BASE_URL = config.CURRENT_BASE_URL;
+
 
     if (!endpoint) {
         return Promise.reject("the endpoint parameter is required");

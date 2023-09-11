@@ -76,11 +76,7 @@ function sendGetRequest({ endpoint, queryParams = {} } = {}) {
 
 function processApiError(error){
     
-    alert("There was an error. Could not connect to the server");
-
-    if(error){
-        console.log(error);
-    }
+    alert("Could not complete the request,due to an error in the server");
 }
 
 function testFunction(){

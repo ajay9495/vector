@@ -25,6 +25,7 @@ export default function ContactLogic(){
 
         if(isInputsValid()){
 
+
             setIsMessageSent("sending");
 
             const formData =  new FormData();
@@ -46,10 +47,7 @@ export default function ContactLogic(){
             });
 
         }
-        else{
 
-            console.log("the input fields are not valid");
-        }
 
     }
 
@@ -57,12 +55,14 @@ export default function ContactLogic(){
     
     function processSubmitFormResponse(response){
 
+
+
         if(response){
 
             if(response.status == "success"){
 
                 setIsMessageSent("sent");
-                console.log("successfully got message");
+                
             }
             else{
 
